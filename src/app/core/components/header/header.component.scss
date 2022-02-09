@@ -1,0 +1,61 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: var(--navigation-bg);
+    height: 50px;
+    margin-left: 40px;
+
+    .header-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+
+        img {
+            // I'll hack the color a bit, pressed for time
+            filter: invert(100%);
+        }
+    }
+
+    .header-control {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        // TODO this was copy pasted from nav component; encapsulate the buttons?
+        .header-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background: none;
+            border: none;
+            width: 50px;
+            padding: 10px;
+            color: var(--navigation-color);
+
+            &:hover {
+                background: var(--navigation-highlight-bg);
+                cursor: pointer;
+            }
+
+            .header-button-img {
+                height: 20px;
+            }
+        }
+
+        .header-user-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 50px;
+            height: 100%;
+        }
+    }
+}
