@@ -19,5 +19,6 @@ export class NavigationComponent {
 
   public navigateTo(destination: string): void {
     this.router.navigate([destination]);
+    this.expanded = false;
   }
 }
