@@ -1,8 +1,11 @@
 <aside class="navigation" aria-label="Main navigation" [ngClass]="{'navigation--expanded': expanded}">
 
     <!-- Open/close menu -->
-    <button class="navigation__button" type="button" aria-label="Expand navigation menu" (click)="toggleExpand()">
-        <img class="navigation__button__img" src="assets/icons/burger.svg" alt="" aria-hidden="true" />
+    <button class="navigation__button" type="button" [attr.aria-label]="getBurgerAriaLabel()" (click)="toggleExpand()">        
+        <img class="navigation__button__img" src="assets/icons/burger.svg" alt="" aria-hidden="true" *ngIf="!expanded; else collapseIcon" />
+        <ng-template #collapseIcon>            
+            <img class="navigation__button__img" src="assets/icons/burger-collapse.svg" alt="" aria-hidden="true" />
+        </ng-template>
     </button>
 
     <!-- Navigation items -->

@@ -20,6 +20,12 @@ export class NavigationComponent {
     this.expanded = !this.expanded;
   }
 
+  public getBurgerAriaLabel(): string {
+    return this.expanded 
+      ? 'Shrink the navigation menu'
+      : 'Extend the navigation menu';
+  }
+
   public isActive(buttonName: string): boolean {
     return buttonName === this._activeButton;
   }
