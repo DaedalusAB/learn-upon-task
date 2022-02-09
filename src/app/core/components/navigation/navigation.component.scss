@@ -4,7 +4,7 @@
     flex-direction: column;
     background: var(--navigation-bg);
     min-height: 100%;
-    width: 40px;
+    width: 50px;
 
     &--expanded {
         width: 180px;
@@ -13,8 +13,10 @@
     &__button {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         background: none;
         border: none;
+        height: 50px;
         padding: 10px;
         color: var(--navigation-color);
 
@@ -25,7 +27,7 @@
 
         &--active {
             background: var(--navigation-highlight-bg);
-            
+
             &:hover {
                 cursor: default;
             }
