@@ -2,10 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    NavigationComponent,
+  ],
+  exports: [
+    NavigationComponent,
+  ],
   imports: [
     CommonModule,
     HttpClientModule,

@@ -1,0 +1,46 @@
+// menu styles
+.navigation {
+    display: flex;
+    flex-direction: column;
+
+    background: var(--navigation-bg);
+
+    height: 100%;
+    width: 40px;
+
+    &.expanded {
+        width: 180px;
+    }
+
+    @media only screen and (max-width: 450px) {
+        display: none;
+    }
+
+    .navigation-button {
+        display: flex;
+        flex-direction: row;
+
+        background: none;
+        border: none;
+        padding: 10px;
+        color: var(--navigation-color);
+
+        &:hover {
+            background: var(--navigation-highlight-bg);
+            cursor: pointer;
+        }
+
+        .navigation-button-img {
+            width: 20px;
+        }
+
+        .navigation-button-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            height: 100%;
+            margin-left: 10px;
+        }
+    }
+}
