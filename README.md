@@ -1,27 +1,86 @@
 # LearnUponTask
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+Run with `npm start`
 
-## Development server
+## Task
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Create a small web-application using the latest angular version, which will be interacting with Learnupon external api. Application needs to run with proxy config 
+(see below) and credentials to access api will be given.
 
-## Code scaffolding
+Two pages are required. Home and Users. Below is attached app design and how it should look. Home page can have some random content you find interesting.
+- No need to be pixel perfect.
+- It needs to be responsive.
+- Filters in table header are buttons.
+- Icons in user’s card are also clickable.
+- Pay attention to A11Y.
+- Try to match the following image as close as possible.
+- No need to implement functionalities like pagination, filters, and sorting.
+- Use SCSS preprocessor for stylings.
+- Imagine it would scale.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![alt text](https://i.ibb.co/QJS9JmQ/Capture.png)
 
-## Build
+*Note*: Informations that are missing regarding the design, feel free to mock it.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Users page should provide the ability to list users and create a new user.
 
-## Running unit tests
+- list of users should come from Learnupon api. You can build your own list
+component or use any third party which you find suitable. Note: there will be
+few users preconfigured.
+Endpoint: GET https://angularlu.luptest.com/api/v1/users
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- add new user should be implemented either with a link or a button, which
+should open user form (optionally in a modal/dialog). You can build your own
+component or use third-party.
+Endpoint: POST https://angularlu.luptest.com/api/v1/users
 
-## Running end-to-end tests
+*Note*: Create won’t work but feel free to mock response data.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Sample request:
+```
+{
+  'User':{
+    'last_name':'Upon',
+    'first_name':'Learn',
+    'email':'some.email@examplelms.com',
+    'username':'testusername',
+    'password':'password1',
+    'language':'en'
+  }
+}
+```
 
-## Further help
+Run with proxy https://angular.io/guide/build for reference (you can update route
+‘/**’ to anything you wish)
+```
+ng serve --proxy-config proxy.conf.json
+```
+proxy.conf.json
+```
+{
+  "/**": {
+    "target": {
+      "host": "app.luptest.com",
+      "protocol": "https:",
+      "port": 443
+    },
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info"
+  }
+}
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Sample curl command:
+curl -X GET -H "Content-Type: application/json" --user <username>:<password>
+https://yourdomain.luptest.com/api/v1/users
+API Credentials:
+Username: 40c9b7d5cb0ecb9abaab
+Password: 76c5d1b201c6d52ceae63188fe6d06
+Bonus:
+- Write some unit tests
+- NGRX
+- NGX-Formly
+- Clean HTML/SCSS (BEM, SCSS without Angular Material or similar)
+- Open create user form inside modal
