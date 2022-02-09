@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'lu-navigation',
   templateUrl: './navigation.component.html',
@@ -8,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class NavigationComponent {
   public expanded = false;
+
+  private _activeButton: string = 'home';
 
   constructor(
     private router: Router,
@@ -17,8 +20,12 @@ export class NavigationComponent {
     this.expanded = !this.expanded;
   }
 
-  public navigateTo(destination: string): void {
-    this.router.navigate([destination]);
-    this.expanded = false;
+  public isActive(buttonName: string): boolean {
+    return buttonName === this._activeButton;
+  }
+
+  public navigateTo(buttonName: string): void {
+    this._activeButton = buttonName;
+    this.router.navigate([buttonName]);
   }
 }
