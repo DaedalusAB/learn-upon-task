@@ -5,9 +5,11 @@
     min-width: 100%;
 
     &__side {
+        min-height: 100%;
     }
 
     &__main {
+        min-height: 100%;
         flex-grow: 1;
     }
 }
