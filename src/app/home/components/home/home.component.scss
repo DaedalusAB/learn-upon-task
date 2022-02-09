@@ -1,4 +1,12 @@
 .home {
+    &__title {
+        color: var(--main-color);
+        padding: 10px;
+        
+        h1 {
+            margin: 0;
+        }
+    }
     &__item {
         display: flex;
         flex-direction: column;
