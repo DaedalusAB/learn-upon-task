@@ -2,23 +2,19 @@
 .navigation {
     position: absolute;
     top: 0;
-
     display: flex;
     flex-direction: column;
-
     background: var(--navigation-bg);
-
     height: 100%;
     width: 40px;
 
-    &.expanded {
+    &--expanded {
         width: 180px;
     }
 
-    .navigation-button {
+    &__button {
         display: flex;
         flex-direction: row;
-
         background: none;
         border: none;
         padding: 10px;
@@ -29,15 +25,14 @@
             cursor: pointer;
         }
 
-        .navigation-button-img {
+        &__img {
             width: 20px;
         }
 
-        .navigation-button-text {
+        &__text {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-
             height: 100%;
             margin-left: 10px;
         }

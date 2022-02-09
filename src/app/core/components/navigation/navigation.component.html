@@ -1,19 +1,19 @@
-<aside class="navigation" aria-label="Main navigation" [ngClass]="{'expanded': expanded}">
+<aside class="navigation" aria-label="Main navigation" [ngClass]="{'navigation--expanded': expanded}">
 
     <!-- Open/close menu -->
-    <button class="navigation-button" type="button" aria-label="Expand navigation menu" (click)="toggleExpand()">
-        <img class="navigation-button-img" src="assets/icons/burger.svg" alt="" aria-hidden="true" />
+    <button class="navigation__button" type="button" aria-label="Expand navigation menu" (click)="toggleExpand()">
+        <img class="navigation__button__img" src="assets/icons/burger.svg" alt="" aria-hidden="true" />
     </button>
 
     <!-- Navigation items -->
-    <button class="navigation-button" type="button" aria-label="Navigate to home page">
-        <img class="navigation-button-img" src="assets/icons/home.svg" alt="" aria-hidden="true" />
-        <span class="navigation-button-text" aria-hidden="true" [hidden]="!expanded">Home</span>
+    <button class="navigation__button" type="button" aria-label="Navigate to home page">
+        <img class="navigation__button__img" src="assets/icons/home.svg" alt="" aria-hidden="true" />
+        <span class="navigation__button__text" aria-hidden="true" [hidden]="!expanded">Home</span>
     </button>
 
-    <button class="navigation-button" type="button" aria-label="Navigate to users page">
-        <img class="navigation-button-img" src="assets/icons/users.svg" alt="" aria-hidden="true" />
-        <span class="navigation-button-text" aria-hidden="true" [hidden]="!expanded">Users</span>
+    <button class="navigation__button" type="button" aria-label="Navigate to users page">
+        <img class="navigation__button__img" src="assets/icons/users.svg" alt="" aria-hidden="true" />
+        <span class="navigation__button__text" aria-hidden="true" [hidden]="!expanded">Users</span>
     </button>
 
 </aside>
