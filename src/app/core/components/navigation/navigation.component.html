@@ -6,12 +6,12 @@
     </button>
 
     <!-- Navigation items -->
-    <button class="navigation__button" type="button" aria-label="Navigate to home page">
+    <button class="navigation__button" type="button" aria-label="Navigate to home page" (click)="navigateTo('home')">
         <img class="navigation__button__img" src="assets/icons/home.svg" alt="" aria-hidden="true" />
         <span class="navigation__button__text" aria-hidden="true" [hidden]="!expanded">Home</span>
     </button>
 
-    <button class="navigation__button" type="button" aria-label="Navigate to users page">
+    <button class="navigation__button" type="button" aria-label="Navigate to users page" (click)="navigateTo('users')">
         <img class="navigation__button__img" src="assets/icons/users.svg" alt="" aria-hidden="true" />
         <span class="navigation__button__text" aria-hidden="true" [hidden]="!expanded">Users</span>
     </button>

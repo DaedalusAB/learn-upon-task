@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'lu-navigation',
@@ -8,9 +9,15 @@ import { Component } from '@angular/core';
 export class NavigationComponent {
   public expanded = false;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   public toggleExpand(): void {
     this.expanded = !this.expanded;
+  }
+
+  public navigateTo(destination: string): void {
+    this.router.navigate([destination]);
   }
 }
