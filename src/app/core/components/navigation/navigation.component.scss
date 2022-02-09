@@ -35,6 +35,10 @@
             justify-content: flex-end;
             height: 100%;
             margin-left: 10px;
+
+            &--hidden {
+                display: none;
+            }
         }
     }
 }
