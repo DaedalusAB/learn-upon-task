@@ -1,6 +1,11 @@
-
-<lu-header></lu-header>
-<lu-navigation></lu-navigation>
-<main>
-    <router-outlet></router-outlet>
-</main>
+<div class="layout">
+    <div class="layout__side">
+        <lu-navigation></lu-navigation>
+    </div>
+    <div class="layout__main">
+        <lu-header></lu-header>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>
