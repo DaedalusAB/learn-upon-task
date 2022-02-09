@@ -16,7 +16,16 @@
         img {
             // I'll hack the color a bit, pressed for time
             filter: invert(100%);
+        }        
+    }
+
+    
+
+    @media only screen and (max-width: 450px) {
+        .header-logo {
+            display: none;
         }
+        justify-content: flex-end;
     }
 
     .header-control {

@@ -15,10 +15,6 @@
         width: 180px;
     }
 
-    @media only screen and (max-width: 450px) {
-        display: none;
-    }
-
     .navigation-button {
         display: flex;
         flex-direction: row;
