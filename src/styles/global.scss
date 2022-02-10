@@ -14,3 +14,15 @@ main {
 * {
   font-family: Quicksand, sans-serif;
 }
+
+// Headings (only those used so far)
+h1 {
+  color: var(--main-color);
+  padding: 10px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 14px;
+  margin: 0;
+}
