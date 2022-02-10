@@ -1,12 +1,24 @@
 :root {
-    --navigation-color: #FFFFFF;
-    --navigation-bg: #333333;
-    --navigation-highlight-bg: #585858;
+    // For lack of better names... 
+    --white: #FFFFFF;
+    --dark-grey: #333333;
+    --light-grey: #585858;
+    --blue: #097bb8;
+    --black: #000000;
 
-    --main-bg: #097bb8;    
-    --main-color: #FFFFFF;
+    --main-bg: var(--blue);    
+    --main-color: var(--white);
 
-    --block-bg: #FFFFFF;
-    --block-heading: #097bb8;
-    --block-color: #757575;
+    --navigation-color: var(--white);
+    --navigation-bg: var(--dark-grey);
+    --navigation-highlight-bg: var(--light-grey);
+
+    --block-bg: var(--white);
+    --block-heading: var(--blue);
+    --block-color-primary: var(--black);
+    --block-color-secondary: var(--light-grey);
+    --block-color-highlight: var(--blue);
+
+    --button-bg-highlight: var(--blue);
+    --button-color-highlight: var(--white);
 }
