@@ -1,4 +1,4 @@
-
+@import "/src/styles/mixins.scss";
 
 .table {
     display: flex;
@@ -35,6 +35,8 @@
                 border: 1px solid var(--block-color-secondary);
                 border-radius: 5px;
                 text-indent: 10px;
+
+                @include hide-bellow-width(mobile);
             }
 
             &__add-filter {
@@ -44,6 +46,8 @@
                 font-size: 14px;
                 font-weight: bold;
                 height: var(--filters-item-hegith);
+                
+                @include hide-bellow-width(mobile);
 
                 &:hover {
                     cursor: pointer;
