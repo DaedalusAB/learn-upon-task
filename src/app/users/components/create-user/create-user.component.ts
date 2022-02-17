@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { FormlyFieldConfig } from '@ngx-formly/core';
+import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 import { User, UserType } from '../../models/user.model';
 import { UsersService } from '../../services/users.service';
 
@@ -19,6 +19,7 @@ export class CreateUserComponent {
 
   public form = new FormGroup({});
   public model: User = {} as User;
+  public options: FormlyFormOptions = {};
   //  In absence of validation requrements, I'll stick with some minimum stuff
   public fields: FormlyFieldConfig[] = [
     {
@@ -69,7 +70,10 @@ export class CreateUserComponent {
 
   public onSubmit(model: User): void {
     if (this.form.valid) {
-      this.userService.createUser(this.model).subscribe((createdUser: User) => this.userCreated.emit(createdUser));
+      this.userService.createUser(this.model).subscribe((createdUser: User) => {
+        this.userCreated.emit(createdUser);
+        this.options.resetModel && this.options.resetModel();
+      });
     }
   }
 }
