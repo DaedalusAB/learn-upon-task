@@ -1,5 +1,5 @@
 <!-- TODO a11y -->
-<div class="user-row">
+<div class="user-row" tabindex="0">
     <div class="user-row__image" aria-hidden="true">
         <img src="assets/icons/unknown-user.svg">
     </div>
@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="user-row__type">
-        <img class="icon" src="assets/icons/star.svg" aria-hidden="true">
+        <img class="icon" src="assets/icons/star.svg" aria-label="Role">
         <ng-container [ngSwitch]="user?.user_type">
             <span *ngSwitchCase="UserType.Manager">Manager</span>
             <span *ngSwitchCase="UserType.Instructor">Instructor</span>
@@ -21,11 +21,11 @@
         </ng-container>
     </div>
     <div class="user-row__date">
-        <img class="icon" src="assets/icons/date.svg" aria-hidden="true">
+        <img class="icon" src="assets/icons/date.svg" aria-label="Created at">
         {{user?.created_at | date: 'dd.MM.yyyy. hh:mm'}}
     </div>
     <div class="user-row__options">
-        <!-- TODO should be button with a11y support -->
-        <img class="icon" src="assets/icons/extra.svg">
+        <!-- TODO should be button with a11y support; saving time for now -->
+        <img class="icon" src="assets/icons/extra.svg" aria-label="Open user details" tabindex="0">
     </div>
 </div>
