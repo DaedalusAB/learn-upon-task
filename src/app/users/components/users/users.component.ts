@@ -10,7 +10,7 @@ import { User, UserType } from '../../models/user.model';
 export class UsersComponent implements OnInit {
   public users: User[] = [];
   public usersCount: number = 0;
-  public showCreateUserModal: boolean = true; //  TODO this should be false !
+  public showCreateUserModal: boolean = false;
 
   constructor(
     private route: ActivatedRoute
