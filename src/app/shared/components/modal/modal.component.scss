@@ -24,40 +24,28 @@
     background: var(--block-bg);
 
     &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 100%;
         border-bottom: 3px solid var(--block-color-highlight);
         color: var(--block-color-highlight);
         font-size: 16px;
         font-weight: bold;
         text-align: center;
+        position: relative;
+        height: 30px;
+
+        &__close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
     }
 
     &__body {
         padding: 10px;
-    }
-
-    &__footer {
-        width: 100%;
-        border-top: 3px solid var(--block-color-highlight);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        &__button {
-            margin: 5px 10px;
-            background: var(--block-bg);
-            color: var(--block-color-primary);
-            height: var(--filters-item-hegith);
-            padding: 0 10px 0 10px;
-            border: 1px solid var(--button-bg-highlight);
-            border-radius: 5px;
-            cursor: pointer;
-            height: 30px;
-
-            &--default {
-                background: var(--button-bg-highlight);
-                color: var(--block-bg);
-            }
-        }
     }
 }

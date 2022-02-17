@@ -2,14 +2,13 @@
     <div class="modal">
         <div class="modal__header" *ngIf="title">
             {{title}}
+            <div class="modal__header__close" (click)="close()">
+                X
+            </div>
         </div>
         <div class="modal__body">
             <!-- Transclusion -->
             <ng-content></ng-content>
-        </div>
-        <div class="modal__footer">
-            <button class="modal__footer__button" (click)="close()">Close</button>
-            <button class="modal__footer__button modal__footer__button--default" (click)="emitPrimaryAction()" *ngIf="primaryButtonText">{{primaryButtonText}}</button>
         </div>
     </div>
 </div>
