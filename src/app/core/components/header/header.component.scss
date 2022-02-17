@@ -7,7 +7,7 @@
     background: var(--navigation-bg);
     height: 50px;
 
-    @include max-screen-width(tablet) {
+    @include max-screen-width(mobile) {
         justify-content: flex-end;
     }
 
@@ -17,7 +17,7 @@
         justify-content: center;
         padding: 10px;
 
-        @include hide-bellow-width(tablet);
+        @include hide-bellow-width(mobile);
 
         img {
             // I'll hack the color a bit, pressed for time

@@ -27,6 +27,8 @@
             &__count {
                 font-size: 18px;
                 font-weight: bold;
+
+                @include hide-bellow-width(mobile);
             }
 
             &__search {
@@ -47,7 +49,7 @@
                 font-weight: bold;
                 height: var(--filters-item-hegith);
 
-                @include hide-bellow-width(mobile);
+                // @include hide-bellow-width(mobile);
 
                 &:hover {
                     cursor: pointer;
