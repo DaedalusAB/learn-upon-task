@@ -1,3 +1,5 @@
+@import "/src/styles/mixins.scss";
+
 .header {
     display: flex;
     flex-direction: row;
@@ -17,7 +19,7 @@
         }
     }
 
-    @media only screen and (max-width: 450px) {
+    @include max-screen-width(tablet) {
         &__logo {
             display: none;
         }

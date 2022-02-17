@@ -1,9 +1,11 @@
+@import "/src/styles/mixins.scss";
+
 .home {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
-    @media only screen and (max-width: 540px) {
+    @include max-screen-width(tablet) {
         justify-content: center;
     }
    

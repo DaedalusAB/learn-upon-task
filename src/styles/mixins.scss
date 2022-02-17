@@ -1,0 +1,11 @@
+@mixin max-screen-width($point) {
+    @if $point == tablet {
+        @media only screen and (max-width: 570px) {
+            @content ;
+        }
+    } @else if $point == mobile {
+        @media only screen and (max-width: 370px) {
+            @content ;
+        }
+    }
+}
