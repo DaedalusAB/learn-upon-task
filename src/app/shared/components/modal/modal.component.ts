@@ -7,6 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
   @Input() isShown: boolean = false;
+  @Output() isShownChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   @Input() title: string | undefined;
   @Input() primaryButtonText: string | undefined;
   @Output() primaryAction: EventEmitter<void> = new EventEmitter<void>();
@@ -21,6 +23,6 @@ export class ModalComponent implements OnInit {
   }
 
   public close(): void {
-    this.isShown = false;
+    this.isShownChange.emit(false);
   }
 }
