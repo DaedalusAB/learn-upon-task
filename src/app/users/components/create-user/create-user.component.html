@@ -1,4 +1,6 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit(model)">
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit(model)">
     <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <div class="form__footer">
+        <button type="submit" class="btn btn--default">Submit</button>
+    </div>
 </form>

@@ -62,21 +62,8 @@
             flex-direction: row;
             align-items: center;
 
-            &__create {
-                background: var(--button-bg-highlight);
-                color: var(--button-color-highlight);
-                height: var(--filters-item-hegith);
-                padding: 0 10px 0 10px;
-                border: 1px solid var(--button-bg-highlight);
-                border-radius: 5px;
-
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-
-            * {
-                margin-right: 10px;
+            & > * {
+                margin: 0 10px;
             }
         }
     }
