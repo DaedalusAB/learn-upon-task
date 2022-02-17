@@ -7,6 +7,9 @@ import { UsersResolver } from './resolvers/users.resolver';
 import { UserRowComponent } from './components/user-row/user-row.component';
 import { SharedModule } from '../shared/shared.module';
 import { CreateUserComponent } from './components/create-user/create-user.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 
 //  TODO add routing wildcards etc
 const routes: Route[] = [
@@ -28,6 +31,9 @@ const routes: Route[] = [
     HttpClientModule,
     RouterModule.forChild(routes),
     SharedModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot({ extras: { lazyRender: true } }),
+    FormlyBootstrapModule,
   ]
 })
 export class UsersModule { }
