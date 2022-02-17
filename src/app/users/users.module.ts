@@ -5,6 +5,7 @@ import { Route, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersResolver } from './resolvers/users.resolver';
 import { UserRowComponent } from './components/user-row/user-row.component';
+import { SharedModule } from '../shared/shared.module';
 
 //  TODO add routing wildcards etc
 const routes: Route[] = [
@@ -24,6 +25,7 @@ const routes: Route[] = [
     CommonModule,
     HttpClientModule,
     RouterModule.forChild(routes),
+    SharedModule,
   ]
 })
 export class UsersModule { }
