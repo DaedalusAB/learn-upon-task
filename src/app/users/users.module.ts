@@ -10,6 +10,7 @@ import { CreateUserComponent } from './components/create-user/create-user.compon
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { formlyConfig } from './formly.config';
 
 //  TODO add routing wildcards etc
 const routes: Route[] = [
@@ -32,7 +33,7 @@ const routes: Route[] = [
     RouterModule.forChild(routes),
     SharedModule,
     ReactiveFormsModule,
-    FormlyModule.forRoot({ extras: { lazyRender: true } }),
+    FormlyModule.forRoot(formlyConfig),
     FormlyBootstrapModule,
   ]
 })

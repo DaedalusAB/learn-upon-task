@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { User } from '../../models/user.model';
+import { User, UserType } from '../../models/user.model';
 
 @Component({
   selector: 'app-users',
@@ -10,7 +10,7 @@ import { User } from '../../models/user.model';
 export class UsersComponent implements OnInit {
   public users: User[] = [];
   public usersCount: number = 0;
-  public showCreateUserModal: boolean = false;
+  public showCreateUserModal: boolean = true; //  TODO this should be false !
 
   constructor(
     private route: ActivatedRoute
@@ -27,7 +27,8 @@ export class UsersComponent implements OnInit {
     this.showCreateUserModal = true;
   }
 
-  public createUser(): void {
-    console.log(">> TODO")
+  public userCreated(user: User): void {
+    this.users.unshift(user);  // Mock - Just for fun :)
+    this.showCreateUserModal = false;
   }
 }

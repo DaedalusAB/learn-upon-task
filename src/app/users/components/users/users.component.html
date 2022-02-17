@@ -27,5 +27,5 @@
 
 <!-- Create user modal -->
 <lu-modal [(isShown)]="showCreateUserModal" [title]="'Create a user'">
-    <lu-create-user></lu-create-user>
+    <lu-create-user (userCreated)="userCreated($event)"></lu-create-user>
 </lu-modal>
