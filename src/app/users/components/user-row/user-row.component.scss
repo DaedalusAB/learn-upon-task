@@ -1,0 +1,60 @@
+.user-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+
+    background: var(--block-bg);
+    border: 1px solid var(--block-bg);
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--block-color-highlight);
+
+    & > * {
+        margin: 0 10px;
+    }
+
+    &__image {
+        height: 30px;
+        width: 30px;
+    }
+
+    &__info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        &__name {
+            font-size: 16px;
+        }
+
+        &__email {
+            color: var(--block-color-secondary);
+            font-weight: normal;
+        }
+    }
+
+    &__type {
+        width: 150px;
+
+        & > * {
+            margin: 0 5px;
+        }
+    }
+
+    &__date {
+    }
+
+    &__options {
+        cursor: pointer;
+    }
+}
+
+
+.icon {
+    height: 14px;
+}
