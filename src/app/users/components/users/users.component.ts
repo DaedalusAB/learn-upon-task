@@ -10,6 +10,7 @@ import { User } from '../../models/user.model';
 export class UsersComponent implements OnInit {
   public users: User[] = [];
   public usersCount: number = 0;
+  public showCreateUserModal: boolean = false;
 
   constructor(
     private route: ActivatedRoute
@@ -22,4 +23,11 @@ export class UsersComponent implements OnInit {
     });
   }
 
+  public openCreateUserModal(): void {
+    this.showCreateUserModal = true;
+  }
+
+  public createUser(): void {
+    console.log(">> TODO")
+  }
 }

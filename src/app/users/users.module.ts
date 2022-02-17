@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UsersResolver } from './resolvers/users.resolver';
 import { UserRowComponent } from './components/user-row/user-row.component';
 import { SharedModule } from '../shared/shared.module';
+import { CreateUserComponent } from './components/create-user/create-user.component';
 
 //  TODO add routing wildcards etc
 const routes: Route[] = [
@@ -19,7 +20,8 @@ const routes: Route[] = [
 @NgModule({
   declarations: [
     UsersComponent,
-    UserRowComponent
+    UserRowComponent,
+    CreateUserComponent
   ],
   imports: [
     CommonModule,
