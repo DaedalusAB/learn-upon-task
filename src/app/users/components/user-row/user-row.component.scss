@@ -23,6 +23,8 @@
     &__image {
         height: 30px;
         width: 30px;
+
+        @include hide-bellow-width(mobile);
     }
 
     &__info {
