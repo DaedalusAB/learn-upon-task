@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TestService } from './core/services/test.service';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +8,6 @@ import { TestService } from './core/services/test.service';
 export class AppComponent {
   title = 'learn-upon-task';
 
-  constructor(private testService: TestService) {
-  }
-
-  public testProxy(): void {
-    this.testService.getUsers();
+  constructor() {
   }
 }
