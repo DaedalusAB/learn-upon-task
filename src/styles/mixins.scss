@@ -1,11 +1,17 @@
 @mixin max-screen-width($point) {
     @if $point == tablet {
-        @media only screen and (max-width: 570px) {
+        @media only screen and (max-width: 50em) {
             @content ;
         }
     } @else if $point == mobile {
-        @media only screen and (max-width: 370px) {
+        @media only screen and (max-width: 37.5em) {
             @content ;
         }
+    }
+}
+
+@mixin  hide-bellow-width($point) {
+    @include max-screen-width($point) {
+        display: none;
     }
 }

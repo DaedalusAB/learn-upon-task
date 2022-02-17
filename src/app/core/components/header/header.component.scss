@@ -7,23 +7,22 @@
     background: var(--navigation-bg);
     height: 50px;
 
+    @include max-screen-width(tablet) {
+        justify-content: flex-end;
+    }
+
     &__logo {
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 10px;
 
+        @include hide-bellow-width(tablet);
+
         img {
             // I'll hack the color a bit, pressed for time
             filter: invert(100%);
         }
-    }
-
-    @include max-screen-width(tablet) {
-        &__logo {
-            display: none;
-        }
-        justify-content: flex-end;
     }
 
     &__control {
