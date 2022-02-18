@@ -15,13 +15,17 @@
 }
 
 .lu-modal {
-    // TODO mobile style
-
     display: flex;
     flex-direction: column;
     border: 3px solid var(--block-color-highlight);
     border-radius: 5px;
     background: var(--block-bg);
+    margin: 20px;
+
+    
+    @include max-screen-width(tablet) {
+        width: 90%;
+    }
 
     &__header {
         display: flex;
@@ -34,7 +38,7 @@
         font-weight: bold;
         text-align: center;
         position: relative;
-        height: 30px;
+        height: 40px;
 
         &__close {
             position: absolute;

@@ -1,4 +1,12 @@
+@import "/src/styles/mixins.scss";
+
 .form {
+    min-width: 600px;
+
+    @include max-screen-width(tablet) {
+        min-width: unset;
+    }
+    
     &__footer {
         display: flex;
         flex-direction: row;
