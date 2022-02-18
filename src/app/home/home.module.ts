@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './components/home/home.component';
 import { Route, RouterModule } from '@angular/router';
+import { InfoComponent } from './components/info/info.component';
 
 //  TODO add routing wildcards etc
 const routes: Route[] = [
@@ -13,7 +14,8 @@ const routes: Route[] = [
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    InfoComponent
   ],
   imports: [
     CommonModule,
