@@ -31,7 +31,6 @@
         flex-direction: row;
         justify-content: flex-end;
 
-        // TODO this was copy pasted from nav component; encapsulate the buttons?
         &__button {
             display: flex;
             flex-direction: column;

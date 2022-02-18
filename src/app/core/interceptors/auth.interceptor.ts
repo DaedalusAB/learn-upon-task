@@ -12,7 +12,8 @@ export class AuthInterceptor implements HttpInterceptor {
     ) { }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {        
-        //  TODO maybe check if request goes to learn upon API and only then intercept
+        //  TODO maybe check if request goes to learn upon API and only then intercept;
+        //  [not necessary for the scope of the task though]
 
         request = request.clone({
             setHeaders: {

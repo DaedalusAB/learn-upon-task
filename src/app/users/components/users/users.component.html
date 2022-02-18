@@ -1,4 +1,4 @@
-<!-- TODO this html/css should be refactored for beter naming and semantics -->
+<!-- TODO this html/css should be refactored for beter naming and semantics-->
 <div class="table">
     <div class="table__filters" tabindex="0" aria-label="Users table filtering options">
         <div class="table__filters__left">
@@ -19,7 +19,6 @@
     </div>
 
     <div class="table__data" tabindex="0" aria-label="Users table">
-        <!-- I'm not sure if a table with th/tr should be used to help with a11y; might be needed -->
         <lu-user-row *ngFor="let user of users" [user]="user"></lu-user-row>
     </div>
 

@@ -29,6 +29,7 @@ export class UsersResolver implements Resolve<User[]> {
         this.spinnerOverlayService.hide();
 
         //  TODO maybe handle this more gracefully 
+        //  ie. redirect to an error page or similar
         return [];
       })
     );
