@@ -20,7 +20,7 @@ export class CreateUserComponent {
   public form = new FormGroup({});
   public model: User = {} as User;
   public options: FormlyFormOptions = {};
-  //  In absence of validation requrements, I'll stick with some minimum stuff
+  //  In absence of validation requirements, I'll stick with some minimum stuff
   public fields: FormlyFieldConfig[] = [
     {
       key: 'email',
