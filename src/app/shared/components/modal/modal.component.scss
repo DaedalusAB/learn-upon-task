@@ -1,6 +1,6 @@
 @import "/src/styles/mixins.scss";
 
-.container {
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.modal {
+.lu-modal {
     // TODO mobile style
 
     display: flex;

@@ -1,12 +1,12 @@
-<div class="container" *ngIf="isShown">
-    <div class="modal">
-        <div class="modal__header" *ngIf="title">
+<div class="backdrop" *ngIf="isShown">
+    <div class="lu-modal">
+        <div class="lu-modal__header" *ngIf="title">
             {{title}}
-            <div class="modal__header__close" (click)="close()">
+            <div class="lu-modal__header__close" (click)="close()">
                 X
             </div>
         </div>
-        <div class="modal__body">
+        <div class="lu-modal__body">
             <!-- Transclusion -->
             <ng-content></ng-content>
         </div>

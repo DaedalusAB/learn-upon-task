@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { User, UserType } from '../../models/user.model';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-users',
@@ -27,8 +27,8 @@ export class UsersComponent implements OnInit {
     this.showCreateUserModal = true;
   }
 
-  public userCreated(user: User): void {
-    this.users.unshift(user);  // Mock - Just for fun :)
+  public userCreated(createdUser: User): void {
     this.showCreateUserModal = false;
+    console.log("New user", createdUser);
   }
 }
