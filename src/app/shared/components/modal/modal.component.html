@@ -1,5 +1,5 @@
 <div class="backdrop" *ngIf="isShown" [attr.aria-hidden]="isShown">
-    <div class="lu-modal" aria-label="Modal dialog" tabindex="0" #modalBox>
+    <div class="lu-modal" [attr.aria-label]="title ? title + ' dialog' : 'Modal dialog'" tabindex="0" #modalBox>
         <div class="lu-modal__header" *ngIf="title">
             {{title}}
             <button class="lu-modal__header__close-btn" (click)="close()" aria-label="Close modal dialog">
