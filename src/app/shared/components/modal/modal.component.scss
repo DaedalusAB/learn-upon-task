@@ -40,12 +40,15 @@
         position: relative;
         height: 40px;
 
-        &__close {
+        &__close-btn {
             position: absolute;
             top: 5px;
             right: 5px;
             cursor: pointer;
             font-size: 20px;
+            background: none;
+            border: none;
+            color: var(--block-color-highlight);
         }
     }
 
